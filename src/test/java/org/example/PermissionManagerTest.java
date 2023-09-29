@@ -5,25 +5,25 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class PermissionManagerTest {
     @Test
-    private void testGetRoleName() {
+    void testGetRoleName() {
         PermissionManager manager = new PermissionManager();
 
         // Test the getRoleName method for each enum value
-        assertEquals("User", manager.getRoleName());
+        assertEquals("USER", manager.getRoleName());
     }
 
     @Test
-    private void testSetCurrentLevel() {
+    void testSetCurrentLevel() {
         PermissionManager manager = new PermissionManager();
 
         // Test setting the current level
         manager.setRoleName(PermissionLevel.ADMIN);
-        assertEquals("Admin", manager.getRoleName());
+        assertEquals("ADMIN", manager.getRoleName());
 
         manager.setRoleName(PermissionLevel.DEVELOPER);
-        assertEquals("Developer", manager.getRoleName());
+        assertEquals("DEVELOPER", manager.getRoleName());
 
         manager.setRoleName(PermissionLevel.USER);
-        assertEquals("User", manager.getRoleName());
+        assertEquals("USER", manager.getRoleName());
     }
 }
